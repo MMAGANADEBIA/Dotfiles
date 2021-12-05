@@ -9,24 +9,24 @@ To configure you OS like me, install your own toos and copy my files into your c
 soon
 
 # Installed tools
-⋅⋅* Alacritty.
-⋅⋅⋅ https://github.com/alacritty/alacritty
+- Alacritty.
+    -- https://github.com/alacritty/alacritty
 
-⋅⋅* BSPWM.
-⋅⋅⋅ https://github.com/baskerville/bspwm
+- BSPWM.
+    -- https://github.com/baskerville/bspwm
 
-⋅⋅* NEOVIM.
-⋅⋅⋅ https://neovim.io/
+- NEOVIM.
+    -- https://neovim.io/
 
-⋅⋅* NEOVIM utilities pack (NvChad).
-⋅⋅⋅ https://github.com/NvChad/NvChad
-⋅⋅⋅ neovim folder has my custom configurations for NvChad.
+- NEOVIM utilities pack (NvChad).
+    -- https://github.com/NvChad/NvChad
+    --- neovim folder has my custom configurations for NvChad.
 
-⋅⋅* Picom.
-⋅⋅⋅ https://github.com/ibhagwan/picom-ibhagwan-git
+- Picom.
+    -- https://github.com/ibhagwan/picom-ibhagwan-git
 
-⋅⋅* Polybar.
-⋅⋅⋅ https://polybar.github.io/
+- Polybar.
+    -- https://polybar.github.io/
 
-⋅⋅* Sxhkd.
-⋅⋅⋅ https://github.com/baskerville/sxhkd
+- Sxhkd.
+    -- https://github.com/baskerville/sxhkd
