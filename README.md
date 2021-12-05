@@ -10,23 +10,23 @@ soon
 
 # Installed tools
 - Alacritty.
-    -- https://github.com/alacritty/alacritty
+    - https://github.com/alacritty/alacritty
 
 - BSPWM.
-    -- https://github.com/baskerville/bspwm
+    - https://github.com/baskerville/bspwm
 
 - NEOVIM.
-    -- https://neovim.io/
+    - https://neovim.io/
 
 - NEOVIM utilities pack (NvChad).
-    -- https://github.com/NvChad/NvChad
-    --- neovim folder has my custom configurations for NvChad.
+    - https://github.com/NvChad/NvChad
+    - neovim folder has my custom configurations for NvChad.
 
 - Picom.
-    -- https://github.com/ibhagwan/picom-ibhagwan-git
+    - https://github.com/ibhagwan/picom-ibhagwan-git
 
 - Polybar.
-    -- https://polybar.github.io/
+    - https://polybar.github.io/
 
 - Sxhkd.
-    -- https://github.com/baskerville/sxhkd
+    - https://github.com/baskerville/sxhkd
