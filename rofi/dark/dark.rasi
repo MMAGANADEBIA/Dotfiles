@@ -1,0 +1,107 @@
+configuration {
+  show-icons: true;
+  font: "Hack Nerd Font Medium 10";
+  drun-display-format: "{icon} {name}";
+  run-display-format: "{icon} {name}";
+  display-run: " ";
+  display-drun: " ";
+  display-window: " ";
+  modi: "window,run,drun";
+}
+
+* {
+  bg: #151515;
+  background-color: #151515;
+  bg-alt: #3B4252;
+  fg: #e8e8d3;
+  text-color: #e8e8d3;
+
+  accent: #687363;
+  button: #1c1c1c;
+
+  border: 0;
+  lines: 12;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+  spacing: 2%;
+}
+
+element {
+  padding: 12;
+  orientation: vertical;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-alt;
+  text-color: @nord-blue-light;
+}
+
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
+
+}
+
+prompt {
+  background-color: #1c1c1c;
+  enabled: true;
+  font: "SauceCodePro Nerd Font 12";
+  padding: 12 0 0 12;
+  text-color: #e8e8d3;
+}
+
+entry {
+  padding: 12;
+  text-color: #e8e8d3;
+  background-color: #1c1c1c;
+  expand: true;
+  /* padding: 13px 2% 13px 2%; */
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @button;
+    expand: false;
+    border-radius: 6px;
+    margin: 0%;
+    /* padding: 10px; */
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+  cycle: false;
+  dynamic: true;
+}
+
+mainbox {
+  children: [ inputbar, listview ];
+  spacing: 2%;
+  padding: 2% 1% 2% 1%;
+}
+
+element {
+    orientation: vertical;
+    padding: 2% 0% 2% 0%;
+  }
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+  }
+
+element selected {
+    background-color: @button;
+    border-radius: 6px;
+  }
