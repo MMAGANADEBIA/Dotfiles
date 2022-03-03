@@ -6,7 +6,11 @@ Only configuration files from my GNU/Linux instalation, no tutorial or instalati
 To configure you OS like me, install your own toos and copy my files into your config routes.
 
 # Screenshots
-soon
+![lunarvim](./screenshots/lunarvim.jpg)
+![lunarvim dashboard](./screenshots/lunarvim_dashboard.jpg) 
+![nvchad dashboard](./screenshots/nvchad_dashboard.jpg) 
+![utilities bspwm](./screenshots/utilities_bspwm.jpg) 
+![polybar](./screenshots/polybar.jpg) 
 
 # Installed tools
 - Alacritty.
@@ -34,3 +38,11 @@ soon
 
 - Sxhkd.
     - https://github.com/baskerville/sxhkd
+
+# Other utilities
+- LSD
+  - https://github.com/Peltoche/lsd
+- Ranger
+  - https://github.com/hut/rangerPOWER
+- PowerLevel10k
+  - https://github.com/romkatv/powerlevel10k
