@@ -26,15 +26,19 @@ ctrl + alt + l
 super + e
   caja
 
-#Abrir vim
+#Open Nvim
 super + v
   alacritty --hold -e ~/.local/bin/nvim.appimage
 
-#Abrir ranger
+#Open LunarVim
+# super + ctrl + v
+#   alacritty --hold -e ~/.local/bin/lvim
+
+#Open ranger
 super + r
   alacritty --hold -e ranger
 
-#Abrir firefox
+#Open firefox
 super + f
   /opt/firefox/firefox &
 

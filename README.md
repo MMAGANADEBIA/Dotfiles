@@ -18,9 +18,13 @@ soon
 - NEOVIM.
     - https://neovim.io/
 
-- NEOVIM utilities pack (NvChad).
-    - https://github.com/NvChad/NvChad
-    - neovim folder has my custom configurations for NvChad.
+- NEOVIM utilities pack.
+    - LunarVim.
+      - https://github.com/LunarVim/LunarVim 
+      - neovim/lunarvim path has my lunarvim custom configuration.
+    - NvChad
+      - https://github.com/NvChad/NvChad
+      - neovim/nvchad path has a "custom" folder with my custom configurations for NvChad.
 
 - Picom.
     - https://github.com/ibhagwan/picom-ibhagwan-git

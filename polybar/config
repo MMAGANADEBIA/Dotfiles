@@ -66,7 +66,7 @@ wm-restack = bspwm
 
 modules-left = bspwm 
 modules-center =  
-modules-right = memory round-left cpu round-right temperature wlan eth battery round-left time  round-right 
+modules-right = memory round-left cpu round-right temperature wlan eth battery round-left time  round-right  
 font-0 = Hack Nerd Font:style=Bold:pixelsize=9;3
 font-1 = Hack Nerd Font:size=14;4
 font-2 = Material Design Icons:style=Bold:size=9;3
@@ -148,10 +148,10 @@ format-warn = <ramp-warn> <label-warn>
 format-padding = 1
 format-warn-padding = 1
 label = %temperature%
-label-warn = %temperature%
+label-warn =  %temperature%
 label-warn-foreground = #e60053
 ramp-0 =  ""
-ramp-warn = ""
+ramp-warn-0 = ""
 ramp-warn-foreground = #e60053
 ramp-foreground = #a4ebf3
 
@@ -239,11 +239,18 @@ content-foreground = #f25287
 type = internal/network
 interface = wlan0
 interval = 3.0
+;wlan-alt = <ramp-signal> <label-connected>
 format-connected = <ramp-signal> <label-connected> 
+;format-connected = <ramp-signal>
 ramp-signal-0 = "直" 
 ramp-signal-0-foreground = #0AAAf5
 label-connected = %essid%
 label-connected-foreground = #A3BE8C 
+
+label-disconnected = "睊 " 
+;label-disconnected-foreground = ${colors.color4}
+label-disconnected-foreground = #CC0000
+
 
 [module/eth]
 type = internal/network

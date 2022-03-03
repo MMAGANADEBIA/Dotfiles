@@ -46,11 +46,12 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 11
+    y: 11
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  #dynamic_padding: true
+  dynamic_padding: false
 
   # Window decorations
   #
@@ -61,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  # decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -170,7 +171,7 @@ font:
   #
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
-  #use_thin_strokes: true
+  use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -357,7 +358,8 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+# background_opacity: 0.8
+background_opacity: 1
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -857,35 +859,77 @@ cursor:
 #####Color Scheme Configurations######
 ######################################
 
-colors:
-  # Default colors
-  primary:
-    background: '#1c2023'
-      #foreground: '#dddddd'
-    foreground: '#c7ccd1'
-
-  # Normal colors
-  normal:
-    black:   '#000000'
-    red:     '#cc0403'
-    green:   '#19cb00'
-    yellow:  '#cecb00'
-    blue:    '#0d73cc'
-    magenta: '#cb1ed1'
-    cyan:    '#0dcdcd'
-    white:   '#dddddd'
-
-  # Bright colors
-  bright:
-    black:   '#767676'
-    red:     '#f2201f'
-    green:   '#23fd00'
-    yellow:  '#fffd00'
-    blue:    '#1a8fff'
-    magenta: '#fd28ff'
-    cyan:    '#14ffff'
-    white:   '#ffffff'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#1c2023'
+#       #foreground: '#dddddd'
+#     foreground: '#c7ccd1'
+#
+#   # Normal colors
+#   normal:
+#     black:   '#000000'
+#     red:     '#cc0403'
+#     green:   '#19cb00'
+#     yellow:  '#cecb00'
+#     blue:    '#0d73cc'
+#     magenta: '#cb1ed1'
+#     cyan:    '#0dcdcd'
+#     white:   '#dddddd'
+#
+#   # Bright colors
+#   bright:
+#     black:   '#767676'
+#     red:     '#f2201f'
+#     green:   '#23fd00'
+#     yellow:  '#fffd00'
+#     blue:    '#1a8fff'
+#     magenta: '#fd28ff'
+#     cyan:    '#14ffff'
+#     white:   '#ffffff'
 
 ######################################
 #####Color Scheme Configurations######
 ######################################
+
+
+######################################
+##### One Dark Color Scheme Conf #####
+######################################
+
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#282c34'
+    # background: '#1c2023' #From my Color Scheme Configuration.
+    foreground: '#abb2bf'
+
+  # Normal colors
+  normal:
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black:   '#282c34'
+    red:     '#E06C75'
+    green:   '#98c379'
+    yellow:  '#E5C07B'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
+
+  # Bright colors
+  bright:
+    black:   '#5c6370'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#d19a66'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#ffffff'
+
+######################################
+##### One Dark Color Scheme Conf #####
+######################################
+
