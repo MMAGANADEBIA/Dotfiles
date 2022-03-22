@@ -14,6 +14,7 @@ lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 -- lvim.colorscheme = "onedark"
 
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -52,19 +53,49 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
 }
 
+lvim.builtin.which_key.mappings["Z"] = {
+  name = "+True Zen",
+  m = { "<cmd>TZMinimalist<cr>", "Minimalist" },
+  f = { "<cmd>TZFocus<cr>", "Focus" },
+  a = { "<cmd>TZAtaraxis<cr>", "Ataraxis" },
+}
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+--DASHBOARD.
 lvim.builtin.dashboard.active = true
+lvim.builtin.dashboard.custom_header = {
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
+   "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
+   "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
+   "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
+   "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
+   "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
+   "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
+   " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
+   " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
+   "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
+   "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
+}
+
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
+
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
-  "javascript",
   "json",
   "lua",
   "python",
@@ -177,6 +208,7 @@ lvim.plugins = {
     "windwp/nvim-ts-autotag",
   },
   {
+    --Coloe highlighter.
     "norcalli/nvim-colorizer.lua",
   },
   {
@@ -187,38 +219,62 @@ lvim.plugins = {
   {
     --Onedark theme.
     'monsonjeremy/onedark.nvim'
+  },
+  {
+    --Clean and elegant distraction-free writing for neovim.
+    "Pocco81/TrueZen.nvim"
   }
 }
 
+--use one dark color plugin.
 require('onedark').setup()
+
+--vim-matchup
+-- require('vim-matchup').setup({
+--   vim.g.matchup_matchparen_offscreen = { method = "popup" }
+-- })
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
 
---Alacrritty padding autocommand.
-function Sad(line_nr, from, to, fname)
-  vim.cmd(string.format("silent !sed -i '%ss/%s/%s/' %s", line_nr, from, to, fname))
-end
+--KITTY PADDING MODIFICATION IN .zshrc
+--If using kitty terminal emulator, put this in .zshrc configuration.
+-- v(){
+--   if [[ $TERM == "xterm-kitty" ]]; then
+--     kitty @ set-spacing padding=0
+--     lvim $*
+--     kitty @ set-spacing padding=11
+--   else
+--     lvim $*
+--   fi
+-- }
+--KITTY PADDING MODIFICATION IN .zshrc
 
-function IncreasePadding()
-  Sad('49', 0, 11, '~/.config/alacritty/alacritty.yml')
-  Sad('50', 0, 11, '~/.config/alacritty/alacritty.yml')
-end
+--ALACRITTY PADDING AUTOCOMMAND.
+-- function Sad(line_nr, from, to, fname)
+--   vim.cmd(string.format("silent !sed -i '%ss/%s/%s/' %s", line_nr, from, to, fname))
+-- end
 
-function DecreasePadding()
-  Sad('49', 11, 0, '~/.config/alacritty/alacritty.yml')
-  Sad('50', 11, 0, '~/.config/alacritty/alacritty.yml')
-end
+-- function IncreasePadding()
+--    Sad('49', 0, 11, '~/.config/alacritty/alacritty.yml')
+--    Sad('50', 0, 11, '~/.config/alacritty/alacritty.yml')
+-- end
 
-vim.cmd[[
-  augroup ChangeAlacrittyPadding
-   au!
-   au VimEnter * lua DecreasePadding()
-   au VimLeavePre * lua IncreasePadding()
-  augroup END
-]]
+-- function DecreasePadding()
+--    Sad('49', 11, 0, '~/.config/alacritty/alacritty.yml')
+--    Sad('50', 11, 0, '~/.config/alacritty/alacritty.yml')
+-- end
+
+-- vim.cmd[[
+--   augroup ChangeAlacrittyPadding
+--    au!
+--    au VimEnter * lua DecreasePadding()
+--    au VimLeavePre * lua IncreasePadding()
+--   augroup END
+-- ]]
+--ALACRITTY PADDING AUTOCOMMAND.
 
 --Don't change the cursor shape.
 vim.opt.guicursor=""
@@ -355,9 +411,6 @@ require('goto-preview').setup({
 --nvim-ts-autotag
 require('nvim-ts-autotag').setup()
 
---bracey
--- lvim.bracey_refresh_on_save = 1
--- lvim.bracey_eval_on_save = 1
 
 --colorizer
 require("colorizer").setup({ "*" }, {
