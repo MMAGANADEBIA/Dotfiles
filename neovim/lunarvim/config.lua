@@ -14,6 +14,19 @@ lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 -- lvim.colorscheme = "onedark"
 
+--nvim-cmp
+-- lvim.builtin.cmp.formatting = {
+--   format = lvim.builtin.cmp.formatting.kind_icons.cmp_format({
+--     mode = "symbol_text",
+--     menu = ({
+--       buffer = "[Buffer]",
+--       nvim_lsp = "[LSP]",
+--       luasnip = "[LuaSnip]",
+--       nvim_lua = "[Lua]",
+--       latex_symbols = "[Latex]",
+--     })
+--   }),
+-- }
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -223,16 +236,11 @@ lvim.plugins = {
   {
     --Clean and elegant distraction-free writing for neovim.
     "Pocco81/TrueZen.nvim"
-  }
+  },
 }
 
 --use one dark color plugin.
 require('onedark').setup()
-
---vim-matchup
--- require('vim-matchup').setup({
---   vim.g.matchup_matchparen_offscreen = { method = "popup" }
--- })
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {

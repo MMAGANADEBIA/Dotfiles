@@ -51,3 +51,11 @@ To configure you OS like me, install your own toos and copy my files into your c
   - https://github.com/romkatv/powerlevel10k
 -warpd
   - https://github.com/rvaiya/warpd
+-Lightdm
+  -Lightdm-webkit2 with Aether.
+-Rofi
+-Node
+-viu -> to kitty.
+-rofi-wifi-menu
+-spotifyd
+-spotify-tui
