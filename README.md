@@ -59,3 +59,9 @@ To configure you OS like me, install your own toos and copy my files into your c
 -rofi-wifi-menu
 -spotifyd
 -spotify-tui
+
+-Firefox
+  -vimium-C
+  -Ublock Origin
+  -NoScript
+  -DarkReader
