@@ -15,6 +15,9 @@ To configure you OS like me, install your own toos and copy my files into your c
 # Installed tools
 - Alacritty.
     - https://github.com/alacritty/alacritty
+ 
+-Kitty
+    - https://sw.kovidgoyal.net/kitty/
 
 - BSPWM.
     - https://github.com/baskerville/bspwm
@@ -46,3 +49,5 @@ To configure you OS like me, install your own toos and copy my files into your c
   - https://github.com/hut/rangerPOWER
 - PowerLevel10k
   - https://github.com/romkatv/powerlevel10k
+-warpd
+  - https://github.com/rvaiya/warpd
